@@ -1,0 +1,17 @@
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/data/PieceRepository.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/provider/AppConfig.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/AttackState.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/service/model/Piece.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/service/model/PieceId.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/service/model/Location.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/data/LocationRepository.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/service/model/LocationId.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/data/PlayerRepository.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/PlayerService.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/data/PieceDao.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/GameService.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/service/model/Player.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/data/LocationDao.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/exception/MoveException.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/Color.java
+/Users/kevinapril/git/wargame/wargame-api/src/main/java/com/luckyl/wargame/data/PlayerDao.java

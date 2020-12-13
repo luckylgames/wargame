@@ -1,0 +1,178 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: PieceRepository</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.luckyl.wargame.data</a> ]
+</div>
+
+<h1>Coverage Summary for Class: PieceRepository (com.luckyl.wargame.data)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PieceRepository</td>
+<td class="coverageStat">
+  <span class="percent">
+    63.6%
+  </span>
+  <span class="absValue">
+    (7/ 11)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    58.8%
+  </span>
+  <span class="absValue">
+    (20/ 34)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">PieceRepository$$EnhancerBySpringCGLIB$$1f1b6162</td>
+  </tr>
+  <tr>
+    <td class="name">PieceRepository$$EnhancerBySpringCGLIB$$1f1b6162$$FastClassBySpringCGLIB$$5f9515b1</td>
+  </tr>
+  <tr>
+    <td class="name">PieceRepository$$FastClassBySpringCGLIB$$ce8b8a45</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    63.6%
+  </span>
+  <span class="absValue">
+    (7/ 11)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    58.8%
+  </span>
+  <span class="absValue">
+    (20/ 34)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.luckyl.wargame.data;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.luckyl.wargame.Color;
+<i>4</i>&nbsp;import com.luckyl.wargame.service.model.Piece;
+<i>5</i>&nbsp;import com.luckyl.wargame.service.model.PieceId;
+<i>6</i>&nbsp;import lombok.NonNull;
+<i>7</i>&nbsp;import lombok.RequiredArgsConstructor;
+<i>8</i>&nbsp;import lombok.val;
+<i>9</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>10</i>&nbsp;import org.springframework.stereotype.Repository;
+<i>11</i>&nbsp;import org.springframework.transaction.annotation.Transactional;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;import java.util.Collection;
+<i>14</i>&nbsp;import java.util.Collections;
+<i>15</i>&nbsp;import java.util.List;
+<i>16</i>&nbsp;import java.util.Optional;
+<i>17</i>&nbsp;import java.util.stream.Collectors;
+<i>18</i>&nbsp;import java.util.stream.Stream;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;@Repository
+<b class="fc"><i>21</i>&nbsp;@RequiredArgsConstructor(onConstructor = @__(@Autowired))</b>
+<i>22</i>&nbsp;public class PieceRepository {
+<i>23</i>&nbsp;    private final PieceDao dao;
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    @Transactional
+<b class="fc"><i>26</i>&nbsp;    public Piece save(@NonNull Piece piece) {</b>
+<b class="fc"><i>27</i>&nbsp;       return dao.save(piece);</b>
+<i>28</i>&nbsp;    }
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    @Transactional
+<b class="fc"><i>31</i>&nbsp;    public void delete(@NonNull Piece piece) {</b>
+<b class="fc"><i>32</i>&nbsp;        dao.delete(piece);</b>
+<b class="fc"><i>33</i>&nbsp;    }</b>
+<i>34</i>&nbsp;
+<b class="fc"><i>35</i>&nbsp;    public Optional&lt;Piece&gt; getPiece(@NonNull PieceId id) { return dao.findById(id); }</b>
+<i>36</i>&nbsp;
+<b class="fc"><i>37</i>&nbsp;    public Optional&lt;Piece&gt; getPiece(@NonNull Color color, @NonNull Integer rank) {</b>
+<b class="fc"><i>38</i>&nbsp;        final PieceId id = new PieceId(color.getRgb(), rank);</b>
+<b class="fc"><i>39</i>&nbsp;        return getPiece(id);</b>
+<i>40</i>&nbsp;    }
+<i>41</i>&nbsp;
+<b class="fc"><i>42</i>&nbsp;    public List&lt;Piece&gt; getPieces() { return dao.findAll(); }</b>
+<i>43</i>&nbsp;
+<b class="nc"><i>44</i>&nbsp;    public List&lt;Piece&gt; getPiecesByColor(@NonNull Color color) {</b>
+<b class="nc"><i>45</i>&nbsp;        return dao.getPiecesByColor(color.getRgb());</b>
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<b class="nc"><i>48</i>&nbsp;    public List&lt;Piece&gt; getPiecesByRank(@NonNull Integer rank) {</b>
+<b class="nc"><i>49</i>&nbsp;        return dao.getPiecesByRank(rank);</b>
+<i>50</i>&nbsp;    }
+<i>51</i>&nbsp;
+<b class="nc"><i>52</i>&nbsp;    public List&lt;Piece&gt; getDepletedPieces(@NonNull Color color) {</b>
+<b class="nc"><i>53</i>&nbsp;        val colorRgb = color.getRgb();</b>
+<b class="nc"><i>54</i>&nbsp;        val flippedRgb = Color.fromRgb(colorRgb).flip().getRgb();</b>
+<b class="nc"><i>55</i>&nbsp;        val flipped = dao.getDepletedPieces(flippedRgb);</b>
+<b class="nc"><i>56</i>&nbsp;        val depleted = dao.getDepletedPieces(colorRgb);</b>
+<i>57</i>&nbsp;
+<b class="nc"><i>58</i>&nbsp;        return Stream.of(flipped, depleted)</b>
+<b class="nc"><i>59</i>&nbsp;            .flatMap(Collection::stream)</b>
+<b class="nc"><i>60</i>&nbsp;            .distinct()</b>
+<b class="nc"><i>61</i>&nbsp;            .collect(Collectors.toList());</b>
+<i>62</i>&nbsp;    }
+<i>63</i>&nbsp;
+<b class="fc"><i>64</i>&nbsp;    public List&lt;Piece&gt; getRemainingPieces(@NonNull Color color) {</b>
+<b class="fc"><i>65</i>&nbsp;        val colorRgb = color.getRgb();</b>
+<b class="fc"><i>66</i>&nbsp;        val flippedRgb = Color.fromRgb(colorRgb).flip().getRgb();</b>
+<b class="fc"><i>67</i>&nbsp;        val flipped = dao.getDepletedPieces(flippedRgb);</b>
+<b class="fc"><i>68</i>&nbsp;        val remaining = dao.getRemainingPieces(colorRgb);</b>
+<i>69</i>&nbsp;
+<b class="fc"><i>70</i>&nbsp;        return Stream.of(flipped, remaining)</b>
+<b class="fc"><i>71</i>&nbsp;            .flatMap(Collection::stream)</b>
+<b class="fc"><i>72</i>&nbsp;            .distinct()</b>
+<b class="fc"><i>73</i>&nbsp;            .collect(Collectors.toList());</b>
+<i>74</i>&nbsp;    }
+<i>75</i>&nbsp;
+<i>76</i>&nbsp;    public long count() {
+<b class="nc"><i>77</i>&nbsp;        return dao.count();</b>
+<i>78</i>&nbsp;    }
+<i>79</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-12-02 20:56</div>
+</div>
+</body>
+</html>

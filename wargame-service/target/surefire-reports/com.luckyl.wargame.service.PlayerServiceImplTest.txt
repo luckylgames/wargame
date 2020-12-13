@@ -1,0 +1,84 @@
+-------------------------------------------------------------------------------
+Test set: com.luckyl.wargame.service.PlayerServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 24, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 14.472 s <<< FAILURE! - in com.luckyl.wargame.service.PlayerServiceImplTest
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[1]  Time elapsed: 0.406 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=063accb6-093b-41f4-bba7-14c073b16ceb, version=0, name=Kalina, color=#FFFFFF, wins=1),
+    Player(id=1bb49906-3abf-4011-8d48-c6c99c8bf0b1, version=0, name=Kalina, color=#FFFFFF, wins=1)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[2]  Time elapsed: 0.349 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=63518307-e960-45f6-a7d1-d79dcfbb6673, version=0, name=Perry, color=#800000, wins=4),
+    Player(id=689f60e3-0fa3-4413-a48d-870ccaa71b9e, version=0, name=Perry, color=#800000, wins=4)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[3]  Time elapsed: 0.338 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=cc6865e0-cd4f-4403-a99c-968e08b08e60, version=0, name=Perry, color=#800000, wins=4),
+    Player(id=e8c5c79b-ca8e-45b8-ad92-1900047c234d, version=0, name=Perry, color=#800000, wins=4)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[4]  Time elapsed: 0.343 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=6bd7760a-b09d-428d-afc5-d220e057ca1c, version=0, name=Kalina, color=#000099, wins=4),
+    Player(id=904937b0-e3fc-44d5-bde3-17e15015fe47, version=0, name=Kalina, color=#000099, wins=4)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[5]  Time elapsed: 0.358 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=bf37596c-2e03-4dd9-bc9c-441dbf138d9a, version=0, name=Liam, color=#808080, wins=1),
+    Player(id=5bcf4606-1d94-4862-a68a-09f92d475ccf, version=0, name=Liam, color=#808080, wins=1)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[6]  Time elapsed: 0.332 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=66c20bd4-f96d-427f-8ec6-b17340d65599, version=0, name=Kalina, color=#FF0000, wins=1),
+    Player(id=01cb5bd6-7a53-4d29-ade9-cd2947eb0a6c, version=0, name=Kalina, color=#FF0000, wins=1)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[7]  Time elapsed: 0.343 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=b4b791d0-fc4b-49a7-9c01-6d17aaf7993c, version=0, name=Liam, color=#3366CC, wins=0),
+    Player(id=ae171784-5c2f-474a-a55d-4b76224fbea8, version=0, name=Liam, color=#3366CC, wins=0)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[8]  Time elapsed: 0.321 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=8c279481-060d-4f5e-9bbe-378310a6bb1b, version=0, name=Kalina, color=#FFFFFF, wins=1),
+    Player(id=8f1cc570-3972-44b5-bfdd-cf50b173dc51, version=0, name=Kalina, color=#FFFFFF, wins=1)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[9]  Time elapsed: 0.338 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=69da1bbb-c144-425b-af81-58acc2853587, version=0, name=Kalina, color=#FFFFFF, wins=0),
+    Player(id=358bd32c-e468-49ae-be12-9a72038a7c98, version=0, name=Kalina, color=#FFFFFF, wins=0)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+
+com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(Player)[10]  Time elapsed: 0.462 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size:<1> but was:<2> in:
+<[Player(id=6bc3719a-ff99-4ed6-9c6b-a593ef355fdd, version=0, name=Perry, color=#FFFFFF, wins=1),
+    Player(id=e91a6e71-2206-4337-994f-d3a7ce3f776f, version=0, name=Perry, color=#FFFFFF, wins=1)]>
+	at com.luckyl.wargame.service.PlayerServiceImplTest.addPlayer_preExisting(PlayerServiceImplTest.java:66)
+

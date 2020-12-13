@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.luckyl.wargame.service.GameServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 93, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 29.572 s <<< FAILURE! - in com.luckyl.wargame.service.GameServiceImplTest
+com.luckyl.wargame.service.GameServiceImplTest.attack_win(Pair)  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because "this.ranksBlue" is null
+
+com.luckyl.wargame.service.GameServiceImplTest.cantLocatePiece(Pair)  Time elapsed: 0.321 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because "this.ranksBlue" is null
+
+com.luckyl.wargame.service.GameServiceImplTest.attackSameTeam(Pair)  Time elapsed: 0.261 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because "this.ranksBlue" is null
+

@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: PieceDao</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.luckyl.wargame.data</a> ]
+</div>
+
+<h1>Coverage Summary for Class: PieceDao (com.luckyl.wargame.data)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">PieceDao</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.luckyl.wargame.data;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.luckyl.wargame.service.model.Piece;
+<i>4</i>&nbsp;import com.luckyl.wargame.service.model.PieceId;
+<i>5</i>&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+<i>6</i>&nbsp;import org.springframework.data.jpa.repository.Query;
+<i>7</i>&nbsp;import org.springframework.data.repository.query.Param;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import java.util.List;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;public interface PieceDao extends JpaRepository&lt;Piece, PieceId&gt; {
+<i>12</i>&nbsp;    @Query(&quot;SELECT p FROM Piece p WHERE p.color = :color&quot;)
+<i>13</i>&nbsp;    List&lt;Piece&gt; getPiecesByColor(@Param(&quot;color&quot;) String color);
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    @Query(&quot;SELECT p FROM Piece p WHERE p.rank = :rank&quot;)
+<i>16</i>&nbsp;    List&lt;Piece&gt; getPiecesByRank(@Param(&quot;rank&quot;) Integer rank);
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    @Query(&quot;SELECT p FROM Piece p WHERE p.color = :color &quot; +
+<i>19</i>&nbsp;                &quot;AND p.current_count &gt; 0 &quot; +
+<i>20</i>&nbsp;                &quot;AND p.current_count = p.max_count&quot;)
+<i>21</i>&nbsp;    List&lt;Piece&gt; getDepletedPieces(@Param(&quot;color&quot;) String color);
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;    @Query(&quot;SELECT p FROM Piece p WHERE p.color = :color &quot; +
+<i>24</i>&nbsp;        &quot;AND p.current_count &lt; p.max_count&quot;)
+<i>25</i>&nbsp;    List&lt;Piece&gt; getRemainingPieces(@Param(&quot;color&quot;) String color);
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-12-02 20:56</div>
+</div>
+</body>
+</html>
