@@ -13,7 +13,7 @@ public enum Color {
 
     private final String rgbColor;
 
-    private Color(String rgbColor) {
+    Color(String rgbColor) {
         this.rgbColor = StringUtils.isNotBlank(rgbColor) ? rgbColor : "";
     }
 

@@ -1,9 +1,0 @@
-com/luckyl/wargame/provider/PieceProvider.class
-com/luckyl/wargame/provider/RemainingProvider.class
-com/luckyl/wargame/service/GameServiceImplTest.class
-com/luckyl/wargame/service/PlayerServiceImplTest.class
-com/luckyl/wargame/TestApplication.class
-com/luckyl/wargame/provider/PlayerProvider.class
-com/luckyl/wargame/provider/AppConfig.class
-com/luckyl/wargame/provider/TwoLocationProvider.class
-com/luckyl/wargame/provider/LocationProvider.class

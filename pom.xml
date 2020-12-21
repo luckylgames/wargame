@@ -28,9 +28,8 @@
     </dependencyManagement>
 
     <modules>
-        <module>wargame-service</module>
         <module>wargame-api</module>
-        <module>wargame-web</module>
+        <module>wargame</module>
     </modules>
 
     <build>
